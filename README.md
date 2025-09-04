@@ -2,6 +2,13 @@ Background Research: https://docs.google.com/document/d/1MWrTextfkxukDgJf6b0Tx6K
 
 Dataset(sample): https://huggingface.co/datasets/eshangj/SinhalaTTS
 
+**Available Resources**
+
+- https://github.com/TensorSpeech/TensorFlowTTS
+- https://github.com/huggingface/parler-tts
+- https://github.com/2noise/ChatTTS
+- https://github.com/yl4579/StyleTTS2
+
 **Traditional neural TTS**
 
 - had two stages:
