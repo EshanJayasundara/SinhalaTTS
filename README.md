@@ -1,4 +1,4 @@
-**[Architecture](#docs/architecture.md)**
+**[Architecture](docs/architecture.md)**
 
 **Quickstart(after complete the development)**
 ```
