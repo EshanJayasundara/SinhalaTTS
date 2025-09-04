@@ -1,3 +1,5 @@
+**[Architecture](#docs/architecture.md)**
+
 **Quickstart(after complete the development)**
 ```
 pip install -r requirements.txt
