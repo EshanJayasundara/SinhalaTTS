@@ -1,4 +1,33 @@
-Background Research: https://docs.google.com/document/d/1MWrTextfkxukDgJf6b0Tx6KQ-6irLEUDZ8rTX22BAa4/edit?usp=drive_link
+**Quickstart(after complete the development)**
+```
+pip install -r requirements.txt
+```
+
+```
+pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
+
+```
+python data_prep.py
+```
+
+```
+python train_acoustic.py config.yaml
+```
+
+```
+python train_vocoder.py config.yaml
+```
+
+```
+python inference.py --text "බොහෝ දෙනෙක් සුදු ඇඳුම මෙබඳු අවස්ථාවල දී භාවිතයට ගනිති" --out outputs/test.wav
+```
+
+
+
+**Background Research**
+
+doc: https://docs.google.com/document/d/1MWrTextfkxukDgJf6b0Tx6KQ-6irLEUDZ8rTX22BAa4/edit?usp=drive_link
 
 Dataset(sample): https://huggingface.co/datasets/eshangj/SinhalaTTS
 

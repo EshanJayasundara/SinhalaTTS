@@ -1,0 +1,12 @@
+numpy
+scipy
+librosa
+soundfile
+torch
+torchaudio
+matplotlib
+yaml
+tqdm
+tensorboard
+numba
+# TODO #
