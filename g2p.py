@@ -39,9 +39,35 @@ def rough_g2p_conversion(text: str) -> List[str]:
 
 def complete_g2p_conversion(word: str) -> List[str]:
     rough_phoneme = rough_g2p_conversion(word)
+
     ### TODO
+
+    # consonent rule 1
+
+    # consonent rule 2
+
+    # vowel rule 1
+
+    # vowel rule 2
+
+    # vowel rule 3
+
+    # vowel rule 4
+
+    # vowel rule 5
+
+    # vowel rule 6
+
+    # vowel rule 7
+
+    # vowel rule 8
+
+    # Rules of the diphthongs
+
     phoneme = rough_phoneme
+    
     ### 
+
     return phoneme
 
 def word_to_phonemes(word: str) -> List[str]:
