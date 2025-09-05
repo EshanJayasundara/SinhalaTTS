@@ -13,40 +13,34 @@ def create_g2p_dict(path: str) -> Dict:
         GRAPHEME_TO_PHONE[row[0]] = row[1]
     return GRAPHEME_TO_PHONE
 
-def rough_g2p_conversion(word: str) -> str:
+def rough_g2p_conversion(text: str) -> List[str]:
     vowels = create_g2p_dict("g2p-vowels.txt")
     modifiers = create_g2p_dict("g2p-modifiers.txt")
     consonants = create_g2p_dict("g2p-consonents.txt")
-    rough_phoneme = ""
+
+    phonemes: List[str] = []
     i = 0
-    while i < len(word):
-        char = word[i]
-        # vowels (standalone)
+    while i < len(text):
+        char = text[i]
         if char in vowels:
-            rough_phoneme += vowels[char]
-        # consonants
+            phonemes.append(vowels[char])
         elif char in consonants:
             base = consonants[char]
-            # if next is a modifier, apply it
-            if i+1 < len(word) and word[i+1] in modifiers:
-                if modifiers[word[i+1]] == '':
-                    rough_phoneme += base
-                else:
-                    rough_phoneme += base + modifiers[word[i+1]]
-                i += 1  # skip modifier
+            if i + 1 < len(text) and text[i+1] in modifiers:
+                mod = modifiers[text[i+1]]
+                phonemes.append(base + mod if mod else base)
+                i += 1
             else:
-                # inherent vowel (schwa)
-                rough_phoneme += base + "ə"
-        # else: unknown char, keep as is
+                phonemes.append(base + "ə")
         else:
             raise Exception(f"Unknown character detected: {char!r}")
         i += 1
-    return rough_phoneme
+    return phonemes
 
 def complete_g2p_conversion(word: str) -> List[str]:
     rough_phoneme = rough_g2p_conversion(word)
     ### TODO
-    phoneme = [rough_phoneme]
+    phoneme = rough_phoneme
     ### 
     return phoneme
 
