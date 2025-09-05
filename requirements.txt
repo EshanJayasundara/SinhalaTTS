@@ -2,11 +2,11 @@ numpy
 scipy
 librosa
 soundfile
-torch
-torchaudio
+# torch
+# torchaudio
 matplotlib
-yaml
+PyYAML
 tqdm
-tensorboard
+# tensorboard
 numba
 # TODO #

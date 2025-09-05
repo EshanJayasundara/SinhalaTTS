@@ -2,6 +2,7 @@ import os
 import yaml
 import logging
 from pathlib import Path
+from typing import Iterator
 
 def load_config(path: str):
     with open(path, 'r', encoding='utf-8') as f:
@@ -20,4 +21,9 @@ def get_logger(name: str = __name__, level=logging.INFO):
     logger.setLevel(level)
     return logger
 
+def read_file(path: str) -> Iterator[str]:
+    with open(path, 'r', encoding='utf-8') as file:
+        for line in file:
+            yield line.strip()
+        
 # TODO #

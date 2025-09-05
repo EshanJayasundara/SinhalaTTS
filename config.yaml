@@ -10,5 +10,6 @@ training:
   lr: 1e-4
 
 paths:
-  dataset_dir: ./data
+  g2p_file: . # /g2p.txt
+  metadata_dir: ./data # /metadata.txt
   output_dir: ./outputs
