@@ -4,7 +4,6 @@ from typing import List, Dict
 import json
 from pathlib import Path
 
-
 class PhonemeTokenizer:
     def __init__(self, tokens: List[str] = None):
         tokens = tokens or []
